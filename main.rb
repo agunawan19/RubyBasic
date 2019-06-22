@@ -34,7 +34,7 @@ class Scientist
     prepend Smart
     attr_reader :age
 
-    def initialize(name, age=-1)
+    def initialize(name='', age=-1)
         @name, @age = name, age
     end
 
@@ -49,7 +49,12 @@ puts "#{einstein.name} #{einstein.age}"
 
 einstein.run()
 
-puts "#{einstein.name} says #{einstein.act_smart()}"
+puts "#{einstein.name} says #{einstein.act_smart}"
+
+pascal = Scientist.new
+pascal.name = "Blaise"
+pascal.age = 40
+puts "#{pascal.name} says #{pascal.age}"
 
 generic_bird = Bird.new
 generic_bird.tweet(Cardinal.new)
