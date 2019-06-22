@@ -32,16 +32,20 @@ puts "#{max.name} goes #{max.bark} (using interpolation)"
 class Scientist
     include Human
     prepend Smart
+    attr_reader :age
+
+    def initialize(name, age=-1)
+        @name, @age = name, age
+    end
 
     def act_smart
         "E = mc^2"
     end
 end
 
-einstein = Scientist.new
-einstein.name = "Albert"
+einstein = Scientist.new("Albert")
 
-puts einstein.name
+puts "#{einstein.name} #{einstein.age}"
 
 einstein.run()
 
