@@ -53,7 +53,6 @@ puts "#{einstein.name} says #{einstein.act_smart}"
 
 pascal = Scientist.new
 pascal.name = "Blaise"
-pascal.age = 40
 puts "#{pascal.name} says #{pascal.age}"
 
 generic_bird = Bird.new
