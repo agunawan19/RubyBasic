@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
+#
+# Class
+#
 class GermandShepard < Dog
-
-    def bark
-        return "Loud Bark"
-    end
-
+  def bark
+    'Loud Bark'
+  end
 end
