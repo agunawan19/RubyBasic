@@ -13,12 +13,13 @@ require_relative './cardinal'
 require_relative './parrot'
 
 cat = Animal.new
-cat.set_name('Peekaboo')
+# cat.set_name('Peekaboo')
+cat.name = 'Peekaboo'
 
-puts cat.get_name
+# puts cat.get_name
 puts cat.name
 
-cat.name = '"Sophie'
+cat.name = 'Sophie'
 puts cat.name
 
 cat.name = 1234
@@ -29,7 +30,7 @@ rover.name = 'Rover'
 puts rover.name
 
 max = GermandShepard.new
-max.name = '"Max'
+max.name = 'Max'
 
 printf "%s goes %s (using printf)\n", max.name, max.bark
 puts "#{max.name} goes #{max.bark} (using interpolation)"
@@ -51,7 +52,7 @@ class Scientist
   end
 end
 
-einstein = Scientist.new('"Albert')
+einstein = Scientist.new('Albert')
 
 puts "#{einstein.name} #{einstein.age}"
 

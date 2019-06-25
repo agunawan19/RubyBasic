@@ -10,9 +10,9 @@ class Animal
     puts 'Creating a New Animal'
   end
 
-  def new_name(new_name)
-    @name = new_name
-  end
+  # def new_name(new_name)
+  #   @name = new_name
+  # end
 
   # def get_name
   #   @name
@@ -23,11 +23,11 @@ class Animal
   #   @name
   # end
 
-  def name=(new_name)
-    if new_name.is_a?(Numeric)
+  def name=(name)
+    if name.is_a?(Numeric)
       puts "Name Can't Be A Number"
     else
-      @name = new_name
+      @name = name
     end
   end
 end
