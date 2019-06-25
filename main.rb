@@ -3,14 +3,14 @@
 #
 # Main
 #
-require_relative './animal'
-require_relative './dog'
-require_relative './german_shepard'
-require_relative './human'
-require_relative './smart'
-require_relative './bird'
-require_relative './cardinal'
-require_relative './parrot'
+require_relative 'animal'
+require_relative 'dog'
+require_relative 'german_shepard'
+require_relative 'human'
+require_relative 'smart'
+require_relative 'bird'
+require_relative 'cardinal'
+require_relative 'parrot'
 
 cat = Animal.new
 # cat.set_name('Peekaboo')

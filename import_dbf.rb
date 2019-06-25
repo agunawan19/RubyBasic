@@ -3,7 +3,7 @@
 #
 # Open and load dbf file
 #
-require 'dbf.rb'
+require 'dbf'
 
 path = 'c:/repos/Fox/tutorial/lesson5/data/'
 filename = 'country.dbf'
