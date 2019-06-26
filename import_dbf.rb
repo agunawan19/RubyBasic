@@ -61,18 +61,22 @@ def get_table_from_dbf(path, file)
   DBF::Table.new(data)
 end
 
-def convert_dbf_to_wosksheet(path, workbook, counter)
+def convert_dbf_to_worksheet(path, file, workbook, counter)
+  worksheet = add_worksheet(file, workbook, counter)
+  table = get_table_from_dbf(path, file)
+
+  add_column_headers_to_worksheet(worksheet, table)
+  add_record_to_worksheet(worksheet, table)
+end
+
+def convert_all_dbf_to_worksheet(path, workbook, counter)
   Dir
     .entries(path)
     .select! { |file| file.upcase.end_with?('DBF') }
     .each do |file|
       counter += 1
 
-      worksheet = add_worksheet(file, workbook, counter)
-      table = get_table_from_dbf(path, file)
-
-      add_column_headers_to_worksheet(worksheet, table)
-      add_record_to_worksheet(worksheet, table)
+      convert_dbf_to_worksheet(path, file, workbook, counter)
     end
 end
 
@@ -80,7 +84,7 @@ def convert_all_dbf_to_excel(path)
   workbook = RubyXL::Workbook.new
   counter = 0
 
-  convert_dbf_to_wosksheet(path, workbook, counter)
+  convert_all_dbf_to_worksheet(path, workbook, counter)
 
   workbook.write(File.join(path, 'All_Dbf_Files.xlsx'))
 end
