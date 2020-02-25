@@ -3,7 +3,9 @@ GEM
   specs:
     dbf (4.1.2)
     mini_portile2 (2.4.0)
-    nokogiri (1.10.3-x64-mingw32)
+    nokogiri (1.10.8)
+      mini_portile2 (~> 2.4.0)
+    nokogiri (1.10.8-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     rubyXL (3.4.5)
       nokogiri (>= 1.4.4)
@@ -11,6 +13,7 @@ GEM
     rubyzip (1.2.3)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
